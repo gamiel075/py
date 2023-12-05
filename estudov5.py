@@ -25,7 +25,7 @@ produçao = produçao_primeira + produçao_segunda + produçao_terceira + produ�
 #há sempre uma diferença entre renda líquida e renda bruta,á diferença se dá pela existencia de despesas
 
 variança = produçao - lucro 
-renda_líquida = lucro - variança
+renda_líquida = produçao - variança
 
 
 
@@ -48,18 +48,21 @@ elif (renda_líquida < lucro_estimado2 ):
 
 renda = 'a sua renda líquida final é de  %.2f ' % (renda_líquida)
 print(renda)
-despesas = 'vc tem gasto %.2f em despesas'% (variança)
+despesas = 'vc  gastou %.2f em despesas'% (variança)
 print(despesas)
+
+
+Bruta = 'sua Renda bruta é de %.2f ' % ( produçao)
+print(Bruta)
 
 dispesa_extra = float(input('digite o valor das despesas  extras  cujo débito foi incluido mas não catalogado'))
 
 
-RendaXdespesa = produçao - dispesa_extra
-Rendaxdespesa1 = 'Sua Renda bruta menos sua despesas extras deste mês é de %.2f ' % ( RendaXdespesa)
+RendaXdespesa = variança - dispesa_extra
+Rendaxdespesa1 = 'Suas despesas casuais  menos sua despesas extras deste mês é de %.2f ' % ( RendaXdespesa)
 print(Rendaxdespesa1)
 
-despesasnormais_despesasextras = variança - dispesa_extra
-despesasnormais_despesasextras1 = 'a diferença entre suas despesas mensais e as extras é de  %.2f ' % (despesasnormais_despesasextras)
+
 
 pergunta1 = input(('o Resultado foi satisfátorio'))
 
@@ -69,8 +72,5 @@ if(pergunta1 == 'nao' and 'NAO'):
 else:
     print('sua loja esta em constante crescimento parabéns')
 
-pergunta2 = input('faça uma descriçao de  suas despesas extras')
 
-if(pergunta2 == '  '):
-    print('avalie esses gastos para que não prejudiquem mais sua operção')
 

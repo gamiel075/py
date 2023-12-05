@@ -14,7 +14,7 @@ nota_exame1 = float(input('digite sua nota'))
 nota_avaliacao = int(input('digite a nota da avaliacao pessoal'))
 nota_final = nota_avaliacao + nota_exame1 / 2
 
-if (idade_candidato > 20):
+if (idade_candidato >= 20):
     print('sua idade se encontra aprovada')
 else:
     print('desculpe mas voce nao tem idade suficiete')
